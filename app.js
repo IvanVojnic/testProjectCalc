@@ -6,7 +6,11 @@ app.use(express.static(__dirname + '/public'))
 
 app.post('/app', jsonParser, function (request, response) {
     console.log(request.body)
-    response.json(request.body) // отправляем пришедший ответ обратно
+    let math = request.body;
+    math = math.equipment.split(" ") ;
+    let result = eval(math.join(' '));
+    let rez = String(result);
+    response.json(rez) // отправляем пришедший ответ обратно
 })
 
 app.use('/', function (request, response) {
