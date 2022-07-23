@@ -43,30 +43,11 @@ function validatePrevSymbol(str){
 }
 
 async function getSolution(str) {
-    let equip = {
-        equipment: str
-    };
-    /*
-        let response = await fetch('/app.js', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8',
-                Accept: 'application/json',
-            },
-            body: JSON.stringify(equip)
-        });
-        if(response.ok){
-            let result = await response.text();
-            return result;
-        } else {
-            alert("Error");
-        }*/
-    let user = JSON.stringify({
-        userName: "qwerty",
-        userAge: "ytrewq",
-    })
+    let equip = JSON.stringify({
+        equipment: str,
+    });
     let request = new XMLHttpRequest()
-    // посылаем запрос на адрес "/user"
+
     request.open('POST', '/app', true)
     request.setRequestHeader(
         'Content-Type',
@@ -74,12 +55,14 @@ async function getSolution(str) {
     )
     request.addEventListener('load', function () {
         // получаем и парсим ответ сервера
-        let receivedUser = JSON.parse(request.response)
+        let solution = JSON.parse(request.response)
         console.log(
-            receivedUser.userName,
-            '-',
-            receivedUser.userAge
+            solution.equipment,
         ) // смотрим ответ сервера
+        let inputField = document.getElementById("inputField");
+        inputField.value = solution;
     })
-    request.send(user)
+
+    request.send(equip)
 }
+
