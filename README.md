@@ -1,1 +1,1 @@
-https://IvanVojnic.github.io/testProjectCalc/index.html
+https://IvanVojnic.github.io/testProjectCalc/app.js
