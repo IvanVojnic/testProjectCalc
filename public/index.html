@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="styles/bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="styles/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="styles/bootstrap/bootstrap-grid.css">
+    <link rel="stylesheet" href="styles/bootstrap/bootstrap-grid.css.map">
+</head>
+<body>
+<header class="container-fluid d-flex col-12">
+    <nav>
+        <a href="index.html">Calculator</a>
+    </nav>
+</header>
+<main class="container-fluid d-flex col-12 justify-content-center align-items-center myMain">
+    <div class="calcWrapper d-flex col-lg-5 col-md-8 col-12 flex-column justify-content-center align-items-center">
+        <div class="inputFieldWrapper d-flex col-12">
+            <textarea class="d-flex col-12" id="inputField" value=""></textarea>
+        </div>
+        <div class="toolsWrapper d-flex col-12 flex-wrap justify-content-around align-content-around">
+            <div class="rowToolsWrapper d-flex col-12 justify-content-between align-content-around">
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('xSqr')">x<sup>2</sup></div>
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('xn')">x<sup>n</sup></div>
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('C')">C</div>
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('delete')">delete</div>
+            </div>
+            <div class="rowToolsWrapper d-flex col-12 justify-content-between align-content-around">
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('(')">(</div>
+                <div class="tool d-flex col-3" onclick="buttonToolPressed(')')">)</div>
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('%')">%</div>
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('/')">/</div>
+            </div>
+            <div class="rowToolsWrapper d-flex col-12 justify-content-between align-content-around">
+                <div class="tool d-flex col-3 toolNumber" onclick="buttonToolPressed('1')">1</div>
+                <div class="tool d-flex col-3 toolNumber" onclick="buttonToolPressed('2')">2</div>
+                <div class="tool d-flex col-3 toolNumber" onclick="buttonToolPressed('3')">3</div>
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('*')">*</div>
+            </div>
+            <div class="rowToolsWrapper d-flex col-12 justify-content-between align-content-around">
+                <div class="tool d-flex col-3 toolNumber" onclick="buttonToolPressed('4')">4</div>
+                <div class="tool d-flex col-3 toolNumber" onclick="buttonToolPressed('5')">5</div>
+                <div class="tool d-flex col-3 toolNumber" onclick="buttonToolPressed('6')">6</div>
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('-')">-</div>
+            </div>
+            <div class="rowToolsWrapper d-flex col-12 justify-content-between align-content-around">
+                <div class="tool d-flex col-3 toolNumber" onclick="buttonToolPressed('7')">7</div>
+                <div class="tool d-flex col-3 toolNumber" onclick="buttonToolPressed('8')">8</div>
+                <div class="tool d-flex col-3 toolNumber" onclick="buttonToolPressed('9')">9</div>
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('+')">+</div>
+            </div>
+            <div class="rowToolsWrapper d-flex col-12 justify-content-between align-content-around">
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('+/-')">+/-</div>
+                <div class="tool d-flex col-3 toolNumber" onclick="buttonToolPressed('0')">0</div>
+                <div class="tool d-flex col-3" onclick="buttonToolPressed(',')">,</div>
+                <div class="tool d-flex col-3" onclick="buttonToolPressed('=')">=</div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="scripts/index.js"></script>
+</body>
+</html>
