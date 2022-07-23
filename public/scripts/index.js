@@ -67,7 +67,7 @@ async function getSolution(str) {
     })
     let request = new XMLHttpRequest()
     // посылаем запрос на адрес "/user"
-    request.open('POST', 'app.js', true)
+    request.open('POST', '/app', true)
     request.setRequestHeader(
         'Content-Type',
         'application/json'
