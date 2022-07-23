@@ -16,4 +16,5 @@ app.post('/app', jsonParser, function (request, response) {
 app.use('/', function (request, response) {
     response.send('<h1>Главная страница</h1>')
 })
+
 app.listen(3000)

@@ -62,5 +62,7 @@ async function getSolution(str) {
         let inputField = document.getElementById("inputField");
         inputField.value = solution;
     })
+
     request.send(equip)
 }
+
